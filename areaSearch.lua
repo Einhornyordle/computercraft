@@ -12,10 +12,10 @@ local blocks = {
 while true do
     term.clear()
     term.setCursorPos(1, 1)
-    local result = geo.scan(16)
-    local table = {}
-    if result then
-        for index, block in pairs(result) do
+    local scanResult = geo.scan(16)
+    local sortedTable = {}
+    if scanResult then
+        for index, block in pairs(scanResult) do
             if blocks[block.name] then
                 local direction = ""
                 if block.z > 0 then
@@ -28,8 +28,16 @@ while true do
                 elseif block.x < 0 then
                     direction = direction .. "W"
                 end
-                table.insert(table, { block.name, block.x + block.y + block.z, direction, block.x, block.y, block.z })
+                table.insert(sortedTable,
+                    { block.name, block.x + block.y + block.z, direction, block.x, block.y, block.z })
             end
+        end
+        table.sort(sortedTable, function(a, b)
+            return a[2] < b[2]
+        end)
+        for index, block in pairs(sortedTable) do
+            print(block[1])
+            print(block[3], block[4], block[5], block[6])
         end
     end
     sleep(geo.getOperationCooldown("scanBlocks") / 1000)
