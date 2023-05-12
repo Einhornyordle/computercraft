@@ -6,13 +6,13 @@ local modem = -1
 
 --Configureable Variables
 local inputIds = {
-    "dimstorage:dimensional_chest_9"
+    
 }
 local outputIds = {
-    "dimstorage:dimensional_chest_10"
+    
 }
 local storageIds = {
-    "storagedrawers:controller_0"
+    
 }
 local importIds = {
     ""
