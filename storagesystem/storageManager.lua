@@ -3,20 +3,23 @@ local completion = require "cc.completion"
 
 --Peripherals
 local modem = -1
+local turtle = "turtle_5"
 
 --Configureable Variables
 local inputIds = {
-    
+    "dimstorage:dimensional_chest_11"
 }
 local outputIds = {
-    
+    "dimstorage:dimensional_chest_12"
 }
 local storageIds = {
-    
+    "storagedrawers:controller_0"
 }
+--ToDo: Not Jet Implemented
 local importIds = {
     ""
 }
+--ToDo: Not Jet Implemented
 local exportIds = {
     ""
 }
@@ -25,7 +28,7 @@ local exportIds = {
 local function wrapPeripherals(ids)
     local peripherals = {}
     for index, id in pairs(ids) do
-        table.insert(peripherals, peripheral.wrap(id));
+        table.insert(peripherals, peripheral.wrap(id))
     end
     return peripherals;
 end

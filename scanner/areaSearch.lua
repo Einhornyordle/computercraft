@@ -1,7 +1,7 @@
 local geo = peripheral.find("geoScanner")
 
 local blocks = {
-    ["allthemodium:allthemodium_ore"] = true,
+    ["allthemodium:allthemodium_ore"] = false,
     ["minecraft:ancient_debris"] = true,
     ["minecraft:emerald_ore"] = true,
     ["minecraft:deepslate_emerald_ore"] = true,
