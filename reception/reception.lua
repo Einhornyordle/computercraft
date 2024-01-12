@@ -11,17 +11,22 @@ while true do
   for _, name in pairs(pd.getPlayersInRange(radius)) do
     if not visitors[name] then
       if visitors[name] == nil then
-        cb.sendMessageToPlayer(greeting, name)
+        if cb.sendMessageToPlayer(greeting, name) then
+          visitors[name] = true;
+        end
+      else
+        visitors[name] = true;
       end
-      visitors[name] = true;
     end
   end
   for name in pairs(visitors) do
     if visitors[name] then
       visitors[name] = false
     else
-      cb.sendMessageToPlayer(farewell, name)
-      visitors[name] = nil
+      local res, reason = cb.sendMessageToPlayer(farewell, name)
+      if res or reason == "incorrect player name/uuid" then
+        visitors[name] = nil
+      end
     end
   end
 end
