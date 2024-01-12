@@ -6,7 +6,8 @@
 
 **Description:** Scans the area around you for the configured blocks and prints their location if it finds any.
 
-**Configuration:** The `blocks` variable defines what blocks the scanner should look for, just add any block you want or remove those you don't need. You can also just set them to `false` instead of removing them, this is more useful if you want to quickly stop looking for a block for now but continue the search later. Some examples are already provided so you know how to use the variable.
+**Configuration:** 
+- **blocks:** Used to specify which blocks to look for. This variable expects a table where each key is a block id of a block to look for with a value of true. Set the value to false to stop looking for that block or simply remove the entry. Some examples are already provided so you know how to use the variable.
 
 [CC:Tweaked]: https://tweaked.cc/
 [Advanced Peripherals]: https://docs.intelligence-modding.de/

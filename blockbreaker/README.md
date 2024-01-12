@@ -1,8 +1,6 @@
-# Storage System
+# Block Breaker
 
 **Requires:** [CC:Tweaked]
-
-## Storage Manager
 
 **Used in:** CC:Tweaked Mining Turtle
 

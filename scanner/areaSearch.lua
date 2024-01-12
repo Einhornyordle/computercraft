@@ -1,15 +1,15 @@
 local geo = peripheral.find("geoScanner")
 
 local blocks = {
-    ["allthemodium:allthemodium_ore"] = false,
     ["minecraft:ancient_debris"] = true,
     ["minecraft:emerald_ore"] = true,
     ["minecraft:deepslate_emerald_ore"] = true,
     ["minecraft:diamond_ore"] = true,
-    ["minecraft:deepslate_diamond_ore"] = true
+    ["minecraft:deepslate_diamond_ore"] = true,
+    ["allthemodium:allthemodium_ore"] = false
 }
 
-while true do
+while geo do
     term.clear()
     term.setCursorPos(1, 1)
     local scanResult = geo.scan(16)
