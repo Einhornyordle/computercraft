@@ -19,7 +19,7 @@ while true do
   elseif (state == -1 or state == 2) and time > 12541 and time < 13000 then
     state = 3
     cb.sendMessage("The night is approaching, you might want to get some rest...")
-  elseif (state == 0 or state == 3) and time > 17500 and  time < 18500 then
+  elseif (state == -1 or state == 3) and time > 17500 and  time < 18500 then
     state = 0
     cb.sendMessage("The bloodmoon is rising... just kidding, it's midnight tho.")
   end
