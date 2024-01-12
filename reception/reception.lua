@@ -1,4 +1,3 @@
-local pretty = require("cc.pretty")
 local pd = peripheral.find("playerDetector")
 local cb = peripheral.find("chatBox")
 
